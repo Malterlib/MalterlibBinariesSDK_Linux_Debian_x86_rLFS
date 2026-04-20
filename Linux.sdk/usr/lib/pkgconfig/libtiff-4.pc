@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib/i386-linux-gnu
+includedir=${prefix}/include/i386-linux-gnu
+
+Name: libtiff
+Description:  Tag Image File Format (TIFF) library.
+Version: 4.5.0
+Libs: -L${libdir} -ltiff
+Libs.private: -lwebp -lzstd -llzma -lLerc -ljbig -ljpeg -ldeflate -lz -lm 
+Cflags: -I${includedir}
+Requires.private: libwebp libzstd liblzma libjpeg libdeflate zlib 
